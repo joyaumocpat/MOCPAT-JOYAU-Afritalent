@@ -13,11 +13,237 @@ rel="stylesheet">
 </head>
 <body> 
 <!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+ <header>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navMenu" aria-controls="navMenu" 
+          aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+            <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <button id="darkModeToggle" class="btn btn-sm" aria-label="Activer le mode sombre">🌙</button>
+            </li>
+            <li class="nav-item">
+              <a href="freelances.html" class="btn btn-primary btn-sm">Rejoindre AfriTalent</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- SECTION NOTRE HISTOIRE -->
+    <section id="histoire">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h1>Notre Histoire</h1>
+            <p>AfriTalent est née en 2022 d'un constat simple : l'Afrique regorge de talents tech exceptionnels, mais ces talents peinent à trouver des opportunités à la hauteur de leurs compétences.</p>
+            <p>Fondée à Dakar par une équipe de jeunes entrepreneurs passionnés, AfriTalent a pour mission de connecter les meilleurs freelances africains avec des entreprises locales et internationales.</p>
+            <p>En moins de 3 ans, nous avons réuni plus de 2 500 freelances et 800 entreprises partenaires dans 15 pays africains.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/Photo signée Ngozi Ejionueme sur Unsplash.jpg" alt="L'équipe AfriTalent réunie dans leurs bureaux à Dakar" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION EQUIPE -->
+    <section id="equipe">
+      <div class="container">
+        <h2>Notre Équipe</h2>
+        <p>Des passionnés du numérique africain qui travaillent chaque jour pour votre succès.</p>
+
+        <div class="row g-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/h.jpg" alt="Photo de Oumar Seck" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Oumar Seck</h3>
+                <p class="card-subtitle">CEO & Co-fondateur</p>
+                <div class="social-links">
+                  <a href="#" aria-label="LinkedIn de Oumar Seck">LinkedIn</a>
+                  <a href="#" aria-label="Twitter de Oumar Seck">Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/m.jpg" alt="Photo de Mariama Bah" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Mariama Bah</h3>
+                <p class="card-subtitle">CTO & Co-fondatrice</p>
+                <div class="social-links">
+                  <a href="#" aria-label="LinkedIn de Mariama Bah">LinkedIn</a>
+                  <a href="#" aria-label="Twitter de Mariama Bah">Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/mm.jpg" alt="Photo de Koffi Atta" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Koffi Atta</h3>
+                <p class="card-subtitle">Directeur Marketing</p>
+                <div class="social-links">
+                  <a href="#" aria-label="LinkedIn de Koffi Atta">LinkedIn</a>
+                  <a href="#" aria-label="Twitter de Koffi Atta">Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <img src="images/A Woman Wearing Glasses And A White Shirt Is Smiling At The Camera With Her.jpg" alt="Photo de Nadia Traoré" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Nadia Traoré</h3>
+                <p class="card-subtitle">Responsable Communauté</p>
+                <div class="social-links">
+                  <a href="#" aria-label="LinkedIn de Nadia Traoré">LinkedIn</a>
+                  <a href="#" aria-label="Twitter de Nadia Traoré">Twitter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- SECTION VALEURS -->
+    <section id="valeurs">
+      <div class="container">
+        <h2>Nos Valeurs</h2>
+        <div class="row g-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <h3>Innovation</h3>
+                <p>Nous croyons en la technologie comme levier de développement pour l'Afrique de demain.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <h3>Accessibilité</h3>
+                <p>Nous rendons les opportunités tech accessibles à tous les talents africains, partout sur le continent.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <h3>Communauté</h3>
+                <p>Nous construisons une communauté soudée de professionnels qui s'entraident et grandissent ensemble.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card text-center h-100">
+              <div class="card-body">
+                <h3>Excellence</h3>
+                <p>Nous exigeons la qualité dans chaque mission et chaque interaction sur notre plateforme.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- SECTION CHIFFRES CLES -->
+    <section id="chiffres">
+      <div class="container">
+        <h2>Nos Chiffres Clés</h2>
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <span class="stat-number" data-target="2500">2500</span><span>+</span>
+            <p>Freelances inscrits</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="stat-number" data-target="800">800</span><span>+</span>
+            <p>Entreprises partenaires</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="stat-number" data-target="12000">12000</span><span>+</span>
+            <p>Missions réalisées</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <span class="stat-number" data-target="15">15</span><span>+</span>
+            <p>Pays africains</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="mainFooter">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5>AfriTalent</h5>
+          <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Liens utiles</h5>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="freelances.html">Freelances</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Ressources</h5>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guide du freelance</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact</h5>
+          <ul>
+            <li>contact@afritalent.com</li>
+            <li>+221 77 000 00 00</li>
+            <li>Dakar, Sénégal</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center">© <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

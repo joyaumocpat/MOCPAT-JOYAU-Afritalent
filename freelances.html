@@ -13,11 +13,241 @@ rel="stylesheet">
 </head>
 <body> 
 <!-- Le contenu de la page sera ajoute ici --> 
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+ <header>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navMenu" aria-controls="navMenu" 
+          aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+            <li class="nav-item"><a class="nav-linkù" href="tarifs.html">Tarifs</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <button id="darkModeToggle" class="btn btn-sm" aria-label="Activer le mode sombre">🌙</button>
+            </li>
+            <li class="nav-item">
+              <a href="freelances.html" class="btn btn-primary btn-sm">Rejoindre AfriTalent</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+ <main>
+    <!-- BARRE DE FILTRES -->
+    <section id="filtres">
+      <div class="container">
+        <h1>Nos Freelances</h1>
+        <p>Trouvez le freelance idéal pour votre projet parmi nos talents africains.</p>
+        <div class="filtres-btns">
+          <button class="btn btn-outline-primary filtre-btn active" data-categorie="tous">Tous</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="dev">Développement Web</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="design">Design UI/UX</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="marketing">Marketing Digital</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="data">Data & IA</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="redaction">Rédaction Tech</button>
+          <button class="btn btn-outline-primary filtre-btn" data-categorie="devops">DevOps & Cloud</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE DE FREELANCES -->
+    <section id="freelances-grid">
+      <div class="container">
+        <div class="row g-4" id="freelancesContainer">
+            <!-- Freelance 1 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="dev">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/téléchargement (1) - Copie.jpg" alt="Photo de Moussa Diop" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Moussa Diop</h3>
+                <p class="card-subtitle">Développeur Web Full Stack</p>
+                <p class="card-text">Spécialiste React et Node.js avec 5 ans d'expérience sur des projets internationaux.</p>
+                <p>Tarif : 25 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 2 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="design">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/inspiration for your photoshoots.jpg" alt="Photo de Aïcha Koné" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Aïcha Koné</h3>
+                <p class="card-subtitle">Designer UI/UX</p>
+                <p class="card-text">Créatrice d'interfaces intuitives et modernes pour applications mobiles et web.</p>
+                <p>Tarif : 20 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 3 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="marketing">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/téléchargement (1).jpg" alt="Photo de Yaw Asante" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Yaw Asante</h3>
+                <p class="card-subtitle">Spécialiste Marketing Digital</p>
+                <p class="card-text">Expert en SEO, réseaux sociaux et campagnes publicitaires Google Ads.</p>
+                <p>Tarif : 18 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐ (4.6/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 4 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="data">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/Gabe Kunda.jpg" alt="Photo de Ngozi Eze" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Ngozi Eze</h3>
+                <p class="card-subtitle">Data Scientist & IA</p>
+                <p class="card-text">Spécialiste Python, Machine Learning et visualisation de données pour entreprises.</p>
+                <p>Tarif : 30 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐⭐ (5.0/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 5 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="redaction">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/a.jpg" alt="Photo de Mahomed Sy" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Mahomed Sy</h3>
+                <p class="card-subtitle">Rédactrice Tech</p>
+                <p class="card-text">Rédactrice spécialisée en contenus techniques, articles de blog et documentation.</p>
+                <p>Tarif : 12 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐ (4.7/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 6 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="devops">
+            <div class="card h-100">
+              <div class="card-body"ù>
+                <img src="images/téléchargement (2).jpg" alt="Photo de Kwame Boateng" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Kwame Boateng</h3>
+                <p class="card-subtitle">Ingénieur DevOps & Cloud</p>
+                <p class="card-text">Expert AWS, Docker et Kubernetes pour déploiement et infrastructure cloud.</p>
+                <p>Tarif : 35 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐⭐ (4.9/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 7 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="dev">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/Erwecke mit deinem Bewerbungsfoto den Eindruck von Professionalität! 📸 Ein starkes Headshot ist ent.jpg" alt="Photo de Ibrahima Fall" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Ibrahima Fall</h3>
+                <p class="card-subtitle">Développeur Mobile</p>
+                <p class="card-text">Développeur Flutter et React Native pour applications iOS et Android performantes.</p>
+                <p>Tarif : 28 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐ (4.5/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 8 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="design">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/Costume femme - Copie.jpg" alt="Photo de Amara Touré" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Amara Touré</h3>
+                <p class="card-subtitle">Designer Graphique</p>
+                <p class="card-text">Création d'identités visuelles, logos et supports de communication pour marques africaines.</p>
+                <p>Tarif : 15 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐ (4.6/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Freelance 9 -->
+          <div class="col-lg-4 col-md-6 freelance-card" data-categorie="data">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="images/Custom Avatar Creation Service with Disney & Anime Styles.jpg" alt="Photo de Chioma Obi" class="img-fluid rounded-circle mb-3">
+                <h3 class="card-title">Chioma Obi</h3>
+                <p class="card-subtitle">Analyste Data</p>
+                <p class="card-text">Analyse de données business, tableaux de bord Power BI et rapports stratégiques.</p>
+                <p>Tarif : 22 000 FCFA / heure</p>
+                <p>⭐⭐⭐⭐⭐ (4.8/5)</p>
+                <a href="#" class="btn btn-primary">Voir le profil</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+ </main> 
+ <!-- FOOTER -->
+  <footer id="mainFooter">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5>AfriTalent</h5>
+          <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Liens utiles</h5>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="freelances.html">Freelances</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="about.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Ressources</h5>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guide du freelance</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact</h5>
+          <ul>
+            <li>contact@afritalent.com</li>
+            <li>+221 77 000 00 00</li>
+            <li>Dakar, Sénégal</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center">© <span id="currentYear"></span> AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
