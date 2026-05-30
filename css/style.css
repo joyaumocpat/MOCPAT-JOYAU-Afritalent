@@ -210,3 +210,229 @@ body.dark-mode .card {
   border-color: #334155;
   color: #CBD5E1;
 }
+
+#hero {
+  padding-top: 120px;
+  padding-bottom: var(--espacement-section);
+  background-color: var(--couleur-fond);
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--couleur-secondaire);
+}
+
+#hero h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--police-corps);
+  color: var(--couleur-texte);
+  margin-bottom: 30px;
+}
+
+#hero .btn {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#hero img {
+  border-radius: var(--rayon-carte);
+  object-fit: cover;
+  max-height: 500px;
+  width: 100%;
+}
+
+/* Statistiques */
+.stats-row {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.stat-number {
+  font-family: var(--police-titre);
+  font-size: 2.5rem;
+  color: var(--couleur-primaire);
+}
+
+.stats-row p {
+  color: var(--couleur-texte);
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+#how-it-works {
+  background-color: white;
+}
+
+#how-it-works h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bento-card {
+  background-color: var(--couleur-fond);
+  border-radius: var(--rayon-carte);
+  padding: 30px;
+  box-shadow: var(--ombre-carte);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Carte large — occupe 2 colonnes */
+.bento-large {
+  grid-column: span 2;
+}
+
+/* Carte large en largeur — occupe toute la largeur */
+.bento-wide {
+  grid-column: span 3;
+}
+
+.step-number {
+  font-family: var(--police-titre);
+  font-size: 3rem;
+  color: var(--couleur-primaire);
+  opacity: 0.3;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bento-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.bento-card p {
+  color: var(--couleur-texte);
+  font-size: 0.95rem;
+}
+
+#categories {
+  background-color: var(--couleur-fond);
+}
+
+#categories h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: var(--rayon-carte);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--ombre-carte);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+  height: 100%;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(249, 115, 22, 0.15);
+  border-color: var(--couleur-primaire);
+}
+
+.category-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.category-card span {
+  color: var(--couleur-primaire);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#testimonials {
+  background-color: white;
+}
+
+#testimonials h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonial-card {
+  text-align: center;
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--couleur-primaire);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--couleur-texte);
+  margin-bottom: 20px;
+}
+
+.testimonial-card strong {
+  display: block;
+  font-family: var(--police-titre);
+  color: var(--couleur-secondaire);
+  font-size: 1.1rem;
+}
+
+.testimonial-card span {
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+#cta {
+  background-color: var(--couleur-primaire);
+  color: white;
+}
+
+#cta h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+#cta p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+#cta .btn-light {
+  font-weight: 600;
+  color: var(--couleur-primaire);
+  border-radius: 8px;
+  padding: 12px 35px;
+  transition: all 0.3s ease;
+}
+
+#cta .btn-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
