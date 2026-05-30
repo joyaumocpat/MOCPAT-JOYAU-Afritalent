@@ -436,3 +436,183 @@ body.dark-mode .card {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ---- TABLETTE (768px) ---- */
+@media (max-width: 768px) {
+
+  /* Hero */
+  #hero {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero h2 {
+    font-size: 1rem;
+  }
+
+  #hero img {
+    margin-top: 30px;
+    max-height: 350px;
+  }
+
+  #hero .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Statistiques */
+  .stats-row {
+    margin-top: 40px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Bento Grid */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-large {
+    grid-column: span 2;
+  }
+
+  .bento-wide {
+    grid-column: span 2;
+  }
+
+  /* Catégories */
+  .category-card {
+    padding: 20px;
+  }
+
+  /* Témoignages */
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  /* CTA */
+  #cta h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Tarifs */
+  #tarifs .card.border-primary {
+    transform: scale(1);
+  }
+
+  /* Contact */
+  .contact-info {
+    margin-bottom: 30px;
+  }
+
+  /* Footer */
+  #mainFooter {
+    text-align: center;
+  }
+
+  /* Filtres freelances */
+  .filtres-btns {
+    justify-content: center;
+  }
+
+}
+
+/* ---- MOBILE (375px) ---- */
+@media (max-width: 375px) {
+
+  /* Hero */
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero h2 {
+    font-size: 0.95rem;
+  }
+
+  /* Bento Grid */
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-large {
+    grid-column: span 1;
+  }
+
+  .bento-wide {
+    grid-column: span 1;
+  }
+
+  /* Statistiques */
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  /* Navbar */
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  /* Témoignages */
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+
+  /* CTA */
+  #cta h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Footer */
+  #mainFooter {
+    padding: 40px 0 20px;
+  }
+
+  /* Bouton retour en haut */
+  #backToTop {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Contact */
+  .form-control,
+  .form-select {
+    padding: 10px 12px;
+  }
+
+  /* Tarifs */
+  .price {
+    font-size: 1.6rem;
+  }
+
+}
+
+/* ---- DESKTOP (1200px+) ---- */
+@media (min-width: 1200px) {
+
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+}
+
+
