@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+
+:root{
+     /* Couleurs principales */
+  --couleur-primaire: #F97316;
+  --couleur-secondaire: #1E293B;
+  --couleur-accent: #FFFFFF;
+  --couleur-fond: #F8FAFC;
+  --couleur-texte: #334155;
+
+  /* Typographie */
+  --police-titre: 'Syne', sans-serif;
+  --police-corps: 'Inter', sans-serif;
+
+  /* Espacements */
+  --espacement-section: 80px;
+  --espacement-sm: 20px;
+
+  /* Bordures */
+  --rayon-carte: 16px;
+
+  /* Ombres */
+  --ombre-carte: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--police-corps);
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--police-titre);
+  color: var(--couleur-secondaire);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: var(--espacement-section) 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#mainNavbar {
+  background-color: var(--couleur-accent);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar au scroll — ajoutée par JS */
+#mainNavbar.scrolled {
+  padding: 8px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  color: var(--couleur-secondaire) !important;
+}
+
+.nav-link {
+  font-family: var(--police-corps);
+  font-weight: 500;
+  color: var(--couleur-texte) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--couleur-primaire) !important;
+}
+
+.btn-primary {
+  background-color: var(--couleur-primaire);
+  border-color: var(--couleur-primaire);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ea6c0a;
+  border-color: #ea6c0a;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--couleur-primaire);
+  border-color: var(--couleur-primaire);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--couleur-primaire);
+  color: white;
+  transform: translateY(-2px);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--couleur-primaire);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: var(--ombre-carte);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #ea6c0a;
+  transform: translateY(-3px);
+}
+
+#mainFooter {
+  background-color: var(--couleur-secondaire);
+  color: #94A3B8;
+  padding: 60px 0 30px;
+}
+
+#mainFooter h5 {
+  color: var(--couleur-accent);
+  font-family: var(--police-titre);
+  margin-bottom: 20px;
+}
+
+#mainFooter ul li {
+  margin-bottom: 10px;
+}
+
+#mainFooter a {
+  color: #94A3B8;
+  transition: color 0.3s ease;
+}
+
+#mainFooter a:hover {
+  color: var(--couleur-primaire);
+}
+
+#mainFooter hr {
+  border-color: #334155;
+  margin: 30px 0;
+}
+
+.copyright {
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
+
+body.dark-mode {
+  background-color: #0F172A;
+  color: #CBD5E1;
+}
+
+body.dark-mode #mainNavbar {
+  background-color: #1E293B;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #F1F5F9;
+}
+
+body.dark-mode .card {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #CBD5E1;
+}
