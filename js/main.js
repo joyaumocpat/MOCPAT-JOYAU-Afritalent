@@ -80,4 +80,93 @@ if (backToTop) {
       behavior: 'smooth'
     });
   });
+
 }
+
+// On récupère tous les éléments avec la classe stat-number
+const statNumbers = document.querySelectorAll('.stat-number');
+
+// Fonction qui anime un compteur de 0 jusqu'à sa valeur cible
+function animerCompteur(element) {
+  // On récupère la valeur cible depuis l'attribut data-target
+  const cible = parseInt(element.getAttribute('data-target'));
+
+  // On définit la durée totale de l'animation en ms
+  const duree = 2000;
+
+  // On calcule le nombre d'étapes
+  const etapes = 60;
+
+  // On calcule combien on ajoute à chaque étape
+  const increment = cible / etapes;
+
+  // On commence à 0
+  let valeurActuelle = 0;
+// On crée un intervalle qui s'exécute toutes les 33ms
+  const intervalle = setInterval(function () {
+
+    // On ajoute l'incrément à la valeur actuelle
+    valeurActuelle += increment;
+
+    // Si on a dépassé la cible, on s'arrête
+    if (valeurActuelle >= cible) {
+      element.textContent = cible.toLocaleString();
+      clearInterval(intervalle);
+    } else {
+      // Sinon on affiche la valeur arrondie
+      element.textContent = Math.floor(valeurActuelle).toLocaleString();
+    }
+
+  }, duree / etapes);
+}
+
+// On crée un IntersectionObserver pour détecter quand
+// les compteurs entrent dans le viewport
+const observateurCompteurs = new IntersectionObserver(function (entries) {
+
+  entries.forEach(function (entry) {
+    // Si l'élément est visible dans le viewport
+    if (entry.isIntersecting) {
+      // On lance l'animation du compteur
+      animerCompteur(entry.target);
+      // On arrête d'observer cet élément pour ne pas relancer l'animation
+      observateurCompteurs.unobserve(entry.target);
+    }
+  });
+
+}, {
+  // L'élément doit être visible à 20% pour déclencher l'animation
+  threshold: 0.2
+});
+
+// On observe chaque compteur
+statNumbers.forEach(function (stat) {
+  observateurCompteurs.observe(stat);
+});
+
+// On récupère tous les éléments avec la classe fade-in
+const fadeElements = document.querySelectorAll('.fade-in');
+
+// On crée un IntersectionObserver pour détecter quand
+// les éléments entrent dans le viewport
+const observateurFade = new IntersectionObserver(function (entries) {
+
+  entries.forEach(function (entry) {
+    // Si l'élément est visible dans le viewport
+    if (entry.isIntersecting) {
+      // On ajoute la classe visible pour déclencher l'animation CSS
+      entry.target.classList.add('visible');
+      // On arrête d'observer cet élément
+      observateurFade.unobserve(entry.target);
+    }
+  });
+
+}, {
+  // L'élément doit être visible à 10% pour déclencher l'animation
+  threshold: 0.1
+});
+
+// On observe chaque élément fade-in
+fadeElements.forEach(function (element) {
+  observateurFade.observe(element);
+});
