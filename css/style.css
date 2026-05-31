@@ -1,6 +1,8 @@
+/*IMPORT GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap');
 
 
+/* VARIABLES CSS*/
 :root{
      /* Couleurs principales */
   --couleur-primaire: #F97316;
@@ -24,7 +26,9 @@
   --ombre-carte: 0 4px 20px rgba(0, 0, 0, 0.08);
 
 }
+ 
 
+/* RESET ET STYLES DE BASE*/
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +75,8 @@ section {
   margin-bottom: 40px;
   text-align: center;
 }
+
+/*  NAVBAR */
 
 #mainNavbar {
   background-color: var(--couleur-accent);
@@ -131,6 +137,8 @@ section {
   transform: translateY(-2px);
 }
 
+/* BOUTON RETOUR EN HAUT */
+
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -153,6 +161,8 @@ section {
   background-color: #ea6c0a;
   transform: translateY(-3px);
 }
+
+/* FOOTER*/
 
 #mainFooter {
   background-color: var(--couleur-secondaire);
@@ -189,6 +199,7 @@ section {
   font-size: 0.9rem;
 }
 
+/*  MODE SOMBRE */
 
 body.dark-mode {
   background-color: #0F172A;
@@ -210,6 +221,8 @@ body.dark-mode .card {
   border-color: #334155;
   color: #CBD5E1;
 }
+
+/* SECTION HERO */
 
 #hero {
   padding-top: 120px;
@@ -263,6 +276,7 @@ body.dark-mode .card {
   margin-top: 5px;
 }
 
+/* SECTION HOW IT WORKS */
 #how-it-works {
   background-color: white;
 }
@@ -320,6 +334,8 @@ body.dark-mode .card {
   font-size: 0.95rem;
 }
 
+/*  SECTION CATEGORIES */
+
 #categories {
   background-color: var(--couleur-fond);
 }
@@ -358,6 +374,7 @@ body.dark-mode .card {
   font-weight: 500;
 }
 
+/*  SECTION TESTIMONIALS */
 #testimonials {
   background-color: white;
 }
@@ -406,6 +423,8 @@ body.dark-mode .card {
 .carousel-control-next-icon {
   filter: invert(1);
 }
+
+/* SECTION CTA */
 
 #cta {
   background-color: var(--couleur-primaire);
