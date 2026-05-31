@@ -170,3 +170,166 @@ const observateurFade = new IntersectionObserver(function (entries) {
 fadeElements.forEach(function (element) {
   observateurFade.observe(element);
 });
+// On récupère tous les boutons de filtre
+const filtreBtns = document.querySelectorAll('.filtre-btn');
+
+// On récupère toutes les cartes freelances
+const freelanceCards = document.querySelectorAll('.freelance-card');
+
+// Si on est sur la page freelances
+if (filtreBtns.length > 0) {
+
+  // On écoute le clic sur chaque bouton de filtre
+  filtreBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+
+      // On retire la classe active de tous les boutons
+      filtreBtns.forEach(function (b) {
+        b.classList.remove('active');
+      });
+
+      // On ajoute la classe active au bouton cliqué
+      btn.classList.add('active');
+
+      // On récupère la catégorie du bouton cliqué
+      const categorie = btn.getAttribute('data-categorie');
+
+      // On parcourt toutes les cartes freelances
+      freelanceCards.forEach(function (card) {
+
+        // Si la catégorie est "tous" ou si la carte correspond à la catégorie
+        if (categorie === 'tous' || card.getAttribute('data-categorie') === categorie) {
+          // On affiche la carte
+          card.style.display = 'block';
+        } else {
+          // Sinon on cache la carte
+          card.style.display = 'none';
+        }
+
+      });
+
+    });
+  });
+
+}
+
+// On récupère le formulaire
+const contactForm = document.getElementById('contactForm');
+
+// Si on est sur la page contact
+if (contactForm) {
+
+  // Fonction pour afficher une erreur sous un champ
+  function afficherErreur(champId, message) {
+    const champ = document.getElementById(champId);
+    const erreur = document.getElementById(champId + 'Error');
+    // On ajoute la classe is-invalid au champ
+    champ.classList.add('is-invalid');
+    champ.classList.remove('is-valid');
+    // On affiche le message d'erreur
+    erreur.textContent = message;
+  }
+
+  // Fonction pour afficher un succès sur un champ
+  function afficherSucces(champId) {
+    const champ = document.getElementById(champId);
+    const erreur = document.getElementById(champId + 'Error');
+    // On ajoute la classe is-valid au champ
+    champ.classList.add('is-valid');
+    champ.classList.remove('is-invalid');
+    // On vide le message d'erreur
+    erreur.textContent = '';
+  }
+
+  // Fonction pour valider l'email avec une regex
+  function validerEmail(email) {
+    // Expression régulière pour vérifier le format de l'email
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  // Quand on soumet le formulaire
+  contactForm.addEventListener('submit', function (e) {
+    // On empêche l'envoi réel du formulaire
+    e.preventDefault();
+
+    // On récupère les valeurs des champs
+    const nom = document.getElementById('nom').value.trim();
+    const prenom = document.getElementById('prenom').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const sujet = document.getElementById('sujet').value;
+    const message = document.getElementById('message').value.trim();
+
+    // On suppose que le formulaire est valide
+    let formulaireValide = true;
+
+    // Validation du nom
+    if (nom === '') {
+      afficherErreur('nom', 'Le nom est obligatoire.');
+      formulaireValide = false;
+    } else {
+      afficherSucces('nom');
+    }
+
+    // Validation du prénom
+    if (prenom === '') {
+      afficherErreur('prenom', 'Le prénom est obligatoire.');
+      formulaireValide = false;
+    } else {
+      afficherSucces('prenom');
+    }
+
+    // Validation de l'email
+    if (email === '') {
+      afficherErreur('email', 'L\'email est obligatoire.');
+      formulaireValide = false;
+    } else if (!validerEmail(email)) {
+      afficherErreur('email', 'Veuillez entrer un email valide (ex: nom@email.com).');
+      formulaireValide = false;
+    } else {
+      afficherSucces('email');
+    }
+
+    // Validation du sujet
+    if (sujet === '') {
+      afficherErreur('sujet', 'Veuillez choisir un sujet.');
+      formulaireValide = false;
+    } else {
+      afficherSucces('sujet');
+    }
+
+    // Validation du message — minimum 20 caractères
+    if (message === '') {
+      afficherErreur('message', 'Le message est obligatoire.');
+      formulaireValide = false;
+    } else if (message.length < 20) {
+      afficherErreur('message', 'Le message doit contenir au moins 20 caractères.');
+      formulaireValide = false;
+    } else {
+      afficherSucces('message');
+    }
+
+    // Si tout est valide
+    if (formulaireValide) {
+      // On affiche le message de succès
+      const successMessage = document.getElementById('successMessage');
+      successMessage.classList.remove('d-none');
+
+      // On réinitialise le formulaire
+      contactForm.reset();
+
+      // On retire les classes de validation
+      const champs = contactForm.querySelectorAll('.form-control, .form-select');
+      champs.forEach(function (champ) {
+        champ.classList.remove('is-valid', 'is-invalid');
+      });
+
+      // On cache le message de succès après 5 secondes
+      setTimeout(function () {
+        successMessage.classList.add('d-none');
+      }, 5000);
+    }
+
+  });
+
+}
